@@ -73,7 +73,7 @@ const Home = () => {
       <div className='footer p-5 flex justify-center flex-col content-center items-center  -mt-32'>
         <h1>
           Created by{" "}
-          <a className='text-blue-700' href='https://github.com/pusakamanggala'>
+          <a className='text-blue-700' href='https://github.com/pusakamanggala/WorkSpot-Job-Recruitment.git'>
             Pusaka Manggala
           </a>
         </h1>
