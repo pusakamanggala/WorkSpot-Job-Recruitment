@@ -29,7 +29,6 @@ const LoginForm = () => {
     axios
       .post("https://dev-example.sanbercloud.com/api/login ", { email, password })
       .then((res) => {
-        console.log(res);
         let data = res.data;
         let { user } = data;
         Cookies.set("token", data.token, { expires: 1 });
@@ -38,7 +37,6 @@ const LoginForm = () => {
       })
 
       .catch((error) => {
-        // console.log(error)
         alert(error.message);
       });
 
