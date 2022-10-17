@@ -2,16 +2,13 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Table } from "flowbite-react";
-import Cookies from "js-cookie";
 import { GlobalContext } from "../context/GlobalContext";
-import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { Result } from "postcss";
 
 const JobList = () => {
   const { state, handleFunction } = useContext(GlobalContext);
-  const { data, setData, input, setInput, fetchStatus, setFetchStatus, currentId, setCurrentId } = state;
-  const { handleSubmit, handleInput, handleDelete, handleEdit, fecthData } = handleFunction;
+  const { data, setData, fetchStatus, setFetchStatus } = state;
+  const { handleDelete, handleEdit, fecthData } = handleFunction;
 
   const handleCurrency = (price) => {
     if (price === 0) return "Free";
@@ -19,7 +16,7 @@ const JobList = () => {
   };
 
   const handleJobStatus = (status) => {
-    if (status == 1) {
+    if (status === 1) {
       return <span className='inline-block rounded-md text-white bg-green-400 px-2 py-1 text-xs font-bold mr-3'>Open</span>;
     } else {
       return <span className='inline-block rounded-md text-white bg-red-400 px-2 py-1 text-xs font-bold mr-3'>Close</span>;

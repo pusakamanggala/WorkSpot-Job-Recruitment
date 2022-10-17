@@ -9,7 +9,7 @@ const Home = () => {
   const [data, setData] = useState(null);
 
   const handleJobStatus = (status) => {
-    if (status == 1) {
+    if (status === 1) {
       return <span className='inline-block rounded-md text-white bg-green-400 px-2 py-1 text-xs font-bold mr-3'>Open</span>;
     } else {
       return <span className='inline-block rounded-md text-white bg-red-400 px-2 py-1 text-xs font-bold mr-3'>Close</span>;

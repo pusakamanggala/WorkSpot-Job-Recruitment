@@ -10,8 +10,8 @@ const NewJobForm = () => {
   let { idData } = useParams();
 
   const { state, handleFunction } = useContext(GlobalContext);
-  const { data, setData, input, setInput, fetchStatus, setFetchStatus, currentId, setCurrentId } = state;
-  const { handleSubmit, handleInput, handleDelete, handleEdit, fecthData } = handleFunction;
+  const { input, setInput } = state;
+  const { handleSubmit, handleInput } = handleFunction;
 
   useEffect(() => {
     if (idData !== undefined) {
@@ -32,7 +32,7 @@ const NewJobForm = () => {
         });
       });
     }
-  }, []);
+  });
 
   return (
     <form onSubmit={handleSubmit} className='bg-white rounded-md p-5'>
@@ -163,34 +163,6 @@ const NewJobForm = () => {
           required
         />
       </div>
-      {/* <div className='flex items-start mb-6'>
-        <div>
-          <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Job Status</label>
-          <div className='flex items-center mb-4 flex-row'>
-            <input
-              id='default-radio-1'
-              type='radio'
-              defaultValue
-              name='default-radio'
-              className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
-            />
-            <label htmlFor='default-radio-1' className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-              Default radio
-            </label>
-          </div>
-          <div className='flex items-center'>
-            <input
-              defaultChecked
-              id='default-radio-2'
-              type='radio'
-              defaultValue
-              name='default-radio'
-              className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
-            />
-            <label className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Checked state</label>
-          </div>
-        </div>
-      </div> */}
       <button
         type='submit'
         className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'

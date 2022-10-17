@@ -31,7 +31,7 @@ const LoginForm = () => {
       .then((res) => {
         console.log(res);
         let data = res.data;
-        let { token, user } = data;
+        let { user } = data;
         Cookies.set("token", data.token, { expires: 1 });
         Cookies.set("user", JSON.stringify(user), { expires: 1 });
         navigate("/");
