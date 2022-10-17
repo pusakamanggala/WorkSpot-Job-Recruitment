@@ -50,7 +50,6 @@ export const GlobalProvider = (props) => {
           { headers: { Authorization: "Bearer " + Cookies.get("token") } }
         )
         .then((res) => {
-          console.log(res);
           setFetchStatus(true);
           navigate("/dashboard/vacancy");
         });
@@ -103,7 +102,6 @@ export const GlobalProvider = (props) => {
   };
   const handleDelete = (event) => {
     let idData = parseInt(event.target.value);
-    console.log(idData);
     axios.delete(`https://dev-example.sanbercloud.com/api/job-vacancy/${idData}`, { headers: { Authorization: "Bearer " + Cookies.get("token") } }).then((res) => {
       setFetchStatus(true);
     });
