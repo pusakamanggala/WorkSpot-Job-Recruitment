@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import Router from "./route/Router";
+import Router from "./Route/Router";
 
 function PageTitle() {
   useEffect(() => {

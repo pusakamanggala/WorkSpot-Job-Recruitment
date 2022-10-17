@@ -56,8 +56,8 @@ const Home = () => {
                       <div className='p-10 rounded-lg shadow-lg cursor-pointer bg-teal-500 text-white hover:bg-teal-400 hover:m-2'>
                         {/* Card contents */}
                         <img className='w-3/12 rounded' src={res.company_image_url} alt='' />
-                        <h1 className=' font-bold'>{res.title}</h1> <h1 className='line-clamp-3  my-2'>{res.job_description}</h1>
-                        <h1 className='font-semibold'>{res.job_qualification}</h1>
+                        <h1 className=' font-bold'>{res.title}</h1> <h1 className='line-clamp-2  my-2'>{res.job_description}</h1>
+                        <h1 className='font-semibold line-clamp-3'>{res.job_qualification}</h1>
                         <h1 className='jobStatus mt-5 '>{handleJobStatus(res.job_status)}</h1>
                       </div>
                     </Link>

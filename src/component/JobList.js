@@ -116,7 +116,7 @@ const JobList = () => {
                     <Table.Cell className='whitespace-nowrap font-medium text-gray-900 dark:text-white text-center'>{index + 1}</Table.Cell>
                     <Table.Cell>{res.title}</Table.Cell>
                     <Table.Cell className='max-w-0 overflow-ellipsis overflow-hidden whitespace-nowrap'>{res.job_description}</Table.Cell>
-                    <Table.Cell>{res.job_qualification}</Table.Cell>
+                    <Table.Cell className='max-w-0 overflow-ellipsis overflow-hidden whitespace-nowrap'>{res.job_qualification}</Table.Cell>
                     <Table.Cell className='text-center'>{res.job_type}</Table.Cell>
                     <Table.Cell className='text-center'>{res.job_tenure}</Table.Cell>
                     <Table.Cell className='text-center'>{handleJobStatus(res.job_status)}</Table.Cell>
