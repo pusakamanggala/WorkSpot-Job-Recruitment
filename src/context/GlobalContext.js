@@ -26,7 +26,7 @@ export const GlobalProvider = (props) => {
   });
   const [fetchStatus, setFetchStatus] = useState(true);
 
-  const [currentId, setCurrentId] = useState(1);
+  const [currentId, setCurrentId] = useState(-1);
 
   const handleSubmit = (event) => {
     event.preventDefault();
