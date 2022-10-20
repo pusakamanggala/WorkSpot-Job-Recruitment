@@ -32,7 +32,7 @@ const NewJobForm = () => {
         });
       });
     }
-  });
+  }, [idData, setInput]);
 
   return (
     <form onSubmit={handleSubmit} className='bg-white rounded-md p-5'>
